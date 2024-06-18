@@ -40,9 +40,9 @@ const Footer = () => {
                                     <li onClick={() => handleLinkClick('/contact-us')}><NavLink to="/contact-us">Contact</NavLink></li>
                                     {/* <li><a href="#">Best Shopify Theme</a></li> */}
                                     <li onClick={() => handleLinkClick('/privacy-policy')}><NavLink to="/privacy-policy">Privacy Policy</NavLink></li>
-                                    
+
                                 </ul>
-                               
+
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 footer-colm col-spacing-bottom">
@@ -53,33 +53,38 @@ const Footer = () => {
                                     <li><a href="#">Shopify Integrations</a></li>
                                     <li onClick={() => handleLinkClick('/shopify-migration')}><NavLink to="/shopify-migration">Shopify Migrations</NavLink></li>
                                     <li><a href="#">Digital Marketing</a></li>
-                                  
-                                    
-                                    
+
+
+
                                 </ul>
-                               
+
                             </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6 footer-address-part footer-colm col-spacing-bottom">
-                            <h3 className="h6 title"><span className="flag-icon"><img src="/assets/images/united-kingdom.png" alt="indian flag" width="20px" height="20px" loading="lazy" /></span>London</h3>
-                            <p className="address">Rear Of 151 Forest Road
-London, England, E17 6HE</p>
-                            <ul className="contact-info">
-                                <li><a href="mailto:contact@noxutechnologies.com" title="contact@noxutechnologies.com"><span className="contact-icon"><img src="/assets/images/email-white.png" alt="email" width="16px" height="14px" loading="lazy" /></span>contact@noxutechnologies.com</a></li>
-                                {/* <li><a href="tel:+92331 7344448"><span className="contact-icon"><img src="/assets/images/call-white.png" alt="call" width="17px" height="17px" loading="lazy" /></span>+92331 7344448</a></li> */}
-                                <li><a href="https://wa.me/447426341853" target='_blank'><span className="contact-icon"><img src="/assets/images/call-white.png" alt="call" width="17px" height="17px" loading="lazy" /></span>+447426341853</a></li>
-                            </ul>
                         </div>
                         <div className="col-lg-3 col-md-6 footer-address-part footer-colm col-spacing-bottom">
                             <h3 className="h6 title"><span className="flag-icon"><img src="/assets/images/pakistan.png" alt="indian flag" width="20px" height="20px" loading="lazy" /></span>Pakistan</h3>
                             <p className="address">819-J2 Johar Town Lahore
-Punjab 54660, Pakistan.</p>
+                                Punjab 54660, Pakistan.</p>
                             <ul className="contact-info">
                                 <li><a href="mailto:contact@noxutechnologies.com" title="contact@noxutechnologies.com"><span className="contact-icon"><img src="/assets/images/email-white.png" alt="email" width="16px" height="14px" loading="lazy" /></span>contact@noxutechnologies.com</a></li>
                                 <li><a href="tel:+92331 7344448"><span className="contact-icon"><img src="/assets/images/call-white.png" alt="call" width="17px" height="17px" loading="lazy" /></span>+92331 7344448</a></li>
-                                </ul>
+                                {/* <li><a href="tel:+92330 043 3565"><span className="contact-icon"><img src="/assets/images/call-white.png" alt="call" width="17px" height="17px" loading="lazy" /></span>+92330 043 3565</a></li> */}
+                            </ul>
                         </div>
-                        
+                        <div className="col-lg-3 col-md-6 footer-address-part footer-colm col-spacing-bottom">
+                            <h3 className="h6 title"><span className="flag-icon"><img src="/assets/images/united-kingdom.png" alt="indian flag" width="20px" height="20px" loading="lazy" /></span>London</h3>
+                            {/* <p className="address">85 Great Portland Street
+London
+W1W 7LT</p> */}
+                            <p className="address">Rear Of 151 Forest Road
+                                London, England, E17 6HE</p>
+                            <ul className="contact-info">
+                                <li><a href="mailto:contact@noxutechnologies.com" title="contact@noxutechnologies.com"><span className="contact-icon"><img src="/assets/images/email-white.png" alt="email" width="16px" height="14px" loading="lazy" /></span>contact@noxutechnologies.com</a></li>
+                                <li><a href="tel:+92331 7344448"><span className="contact-icon"><img src="/assets/images/call-white.png" alt="call" width="17px" height="17px" loading="lazy" /></span>+92331 7344448</a></li>
+                                {/* <li><a href="https://wa.me/447426341853" target='_blank'><span className="contact-icon"><img src="/assets/images/call-white.png" alt="call" width="17px" height="17px" loading="lazy" /></span>+447426341853</a></li> */}
+                            </ul>
+                        </div>
+                       
+
                     </div>
                 </div>
 
@@ -94,7 +99,7 @@ Punjab 54660, Pakistan.</p>
                             <div className="col-md-4">
                                 <ul className="social-media">
                                     <li>
-                                        <a href="https://facebook.com/NOXU Technologies" aria-label="fb link" className="social-media-back" target="_blank">
+                                        <a href="https://www.facebook.com/Noxutechnologies" aria-label="fb link" className="social-media-back" target="_blank">
                                             <svg className="social-media-icon social-media-fb-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M13.7188 3.12848L11.6525 3.12598C9.64875 3.12598 8.35437 4.45348 8.35437 6.51035V8.06973H6.28125V10.8916H8.35437L8.35187 16.876H11.2525L11.255 10.8916H13.6337L13.6319 8.07035H11.255V6.74723C11.255 6.11098 11.4056 5.7891 12.2337 5.7891L13.7125 5.78848L13.7188 3.12848Z" fill="white"></path>
                                             </svg>

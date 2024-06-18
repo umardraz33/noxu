@@ -1,5 +1,7 @@
 import React from 'react'
 import BrandsLogoSlider from '../Components/BrandsLogoSlider'
+import BannerContactForm from '../Components/BannerContactForm'
+import { NavLink } from 'react-router-dom'
 
 const Shopifymigration = () => {
   return (
@@ -8,7 +10,7 @@ const Shopifymigration = () => {
         <div class="breadcrumb-container">
             <div class="container">
                 <ul class="breadcrumb">
-                    <li><a href="https://NOXU Technologies.com/" class="medium-text">Home</a></li>                
+                    <li><NavLink to="/" class="medium-text">Home</NavLink></li>                
                     <li><span class="medium-text">Shopify Migration</span></li>
                 </ul>
             </div>
@@ -43,43 +45,7 @@ const Shopifymigration = () => {
                        <a class="shopify-logo-white-banner" title="Shopify Expert" href="https://hireecommerceexperts.com/" target="_blank"><img loading="lazy" src="assets/images/Shopify-experts.png" alt="we certified icon" width="275px" height="60px"/></a>
                     </div>
                </div>
-               <div class="page-main-banner-colm col-lg-5 col-md-5">
-                   <div class="page-main-banner-contact-form">
-                        <p class="form-title h5">Get A Free Quote</p>
-<form id="quote-form" method="post" name="quote-form" novalidate="novalidate">
-    <input type="hidden" name="c_url" value="NOXU Technologies.com/shopify-migration.php"/>
-    <div class="form-group">
-        <input class="form-field" aria-label="Name" type="text" id="name" name="name" placeholder="Name"/>
-    </div>
-    <div class="form-group">
-        <input class="form-field email-tab" aria-label="Email" type="email" id="email" name="email" placeholder="Email Address"/>
-    </div>
-    <div class="form-group">
-        <div class="select-location">
-            <div class="dropdown example">
-                <div class="ui fluid search selection dropdown country_code">
-                    <span>+</span>
-                    <input type="number" placeholder="92" minlength="1" maxlength="4" id="country_code" name="country_code" class="form-field"/>
-                </div>
-            </div>
-            <input type="tel" class="form-field phone-number-field" aria-label="Phone Number" id="phone" name="phone" placeholder="Phone Number" autocomplete="off"/>
-        </div>
-    </div>
-    <div class="form-group">
-        <textarea class="form-field" aria-label="message" id="message" name="message" placeholder="Write Message" rows="5"></textarea>
-    </div>
-    <div class="successmsg hide">
-        Thank you.We will get back to you soon.
-    </div>
-    <div class="errormsg hide">
-        Somthing went wrong.Please try again.
-    </div>
-    <div class="form-group">
-        <button class="button submit-button" type="submit" aria-label="button Submit" id="get_free_quotes">Submit</button>
-    </div>
-</form>         
-                   </div>
-               </div>
+             <BannerContactForm />
            </div>
        </div>
     </section>

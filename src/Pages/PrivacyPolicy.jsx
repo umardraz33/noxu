@@ -1,5 +1,6 @@
 import React from 'react'
 import LetDiscuss from '../Components/LetDiscuss'
+import { NavLink } from 'react-router-dom'
 
 const PrivacyPolicy = () => {
   return (
@@ -8,7 +9,7 @@ const PrivacyPolicy = () => {
         <div class="breadcrumb-container">
             <div class="container">
                 <ul class="breadcrumb">
-                    <li><a href="https://NOXU Technologies.com/" class="medium-text">Home</a></li>              
+                    <li><NavLink to="/" class="medium-text">Home</NavLink></li>              
                     <li><span class="medium-text">Privacy Policy</span></li>
                 </ul>
             </div>

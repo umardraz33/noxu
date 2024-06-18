@@ -1,30 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import LetDiscuss from '../Components/LetDiscuss'
-import { useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import BannerContactForm from '../Components/BannerContactForm';
 const CaseStudy = () => {
-    const {id} = useParams()
-    const [casestudy, setCaseStudy] = useState([]);
-    const [error, setError] = useState(null);
-    const baseurl = 'http://localhost:1337';
-
-useEffect(()=>{
-    const fetchdata = async()=>{
-        try{
-            const response = await fetch('http://localhost:1337/api/case-studies?populate=image1');
-            const data = await response.json();
-
-            if (data && data.data && data.data.length > 0 && data.data[0].attributes.image1) {
-                setCaseStudy(data.data); // Update to include the array directly
-              } else {
-                throw new Error('Invalid data format');
-              }
-
-        }catch (error) {
-            setError('Error fetching brand data. Please try again later.');
-          } 
-    }
-    fetchdata();
-},[])
+   
   return (
     <div>
       
@@ -33,7 +12,7 @@ useEffect(()=>{
         <div class="breadcrumb-container">
             <div class="container">
                 <ul class="breadcrumb">
-                    <li><a href="https://NOXU Technologies.com/" class="medium-text">Home</a></li>                 
+                    <li><NavLink to="/" class="medium-text">Home</NavLink></li>                 
                     <li><span class="medium-text">Case Studies</span></li>
                 </ul>
             </div>
@@ -68,42 +47,7 @@ useEffect(()=>{
                        <a class="shopify-logo-white-banner" title="Shopify Expert" href="https://hireecommerceexperts.com/" target="_blank"><img loading="lazy" src="assets/images/Shopify-experts.png" alt="we certified icon" width="275px" height="60px"/></a>
                     </div>
                </div>
-               <div class="page-main-banner-colm col-lg-5 col-md-5">
-                   <div class="page-main-banner-contact-form">
-                        <h2 class="form-title h5">Get A Free Quote</h2>
-<form id="quote-form" method="post" name="quote-form" novalidate="novalidate">
-    <input type="hidden" name="c_url" value="NOXU Technologies.com/casestudies.php"/>
-    <div class="form-group">
-        <input class="form-field" aria-label="Name" type="text" id="name" name="name" placeholder="Name"/>
-    </div>
-    <div class="form-group">
-        <input class="form-field email-tab" aria-label="Email" type="email" id="email" name="email" placeholder="Email Address"/>
-    </div>
-    <div class="form-group">
-        <div class="select-location">
-            <div class="dropdown example">
-                <div class="ui fluid search selection dropdown country_code">
-                    <span>+</span>
-                    <input type="number" placeholder="92" minlength="1" maxlength="4" id="country_code" name="country_code" class="form-field"/>
-                </div>
-            </div>
-            <input type="tel" class="form-field phone-number-field" aria-label="Phone Number" id="phone" name="phone" placeholder="Phone Number" autocomplete="off"/>
-        </div>
-    </div>
-    <div class="form-group">
-        <textarea class="form-field" aria-label="message" id="message" name="message" placeholder="Write Message" rows="5"></textarea>
-    </div>
-    <div class="successmsg hide">
-        Thank you.We will get back to you soon.
-    </div>
-    <div class="errormsg hide">
-        Somthing went wrong.Please try again.
-    </div>
-    <div class="form-group">
-        <button class="button submit-button" type="submit" aria-label="button Submit" id="get_free_quotes">Submit</button>
-    </div>
-</form>                   </div>
-               </div>
+               <BannerContactForm />
            </div>
        </div>
     </section>
@@ -140,29 +84,525 @@ useEffect(()=>{
     
                 <div class="col-lg-8 col-md-7 case-study-list-inner col-spacing-bottom">
                     <div class="case-study-tab-content" id="shopify_sotre">
-                    {casestudy.map((val, index)=>(
-                        <div class="case-study-background">
+                    <div class="case-study-background">
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-md-12">
                                     <div class="case-study-image">
-                                        <img loading="lazy" width="370px" height="247px" src={baseurl+val.attributes.image1.data.attributes.url} alt=''/>
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/terra-supra.png" alt="alexandra gioia"/>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="case-study-content-info">
                                         <div class="case-study-name">
-                                            <h5 class="title">{val.attributes.title}</h5>
+                                            <h5 class="title">Terra Supra</h5>
                                         </div>                                    
-                                        <p class="content">{val.attributes.description1}</p>
-                                        <a href="alexandra-gioia-case-study.php" class="button">View Details</a>
+                                        <p class="content">For the Terra Supra website, we have used PSD designs, including multiple features such as the Homepage custom collection section, an integrated after pay payment app, and custom designs created as per the client's requirements.</p>
+                                        {/* <a href="alexandra-gioia-case-study.php" class="button">View Details</a> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/black-insomnia.png" alt="alexandra gioia"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Black Insomnia</h5>
+                                        </div>                                    
+                                        <p class="content">For the black-insomnia website, we have used PSD designs, including multiple features such as the Homepage custom collection section, an integrated after pay payment app, and custom designs created as per the client's requirements.</p>
+                                        {/* <a href="alexandra-gioia-case-study.php" class="button">View Details</a> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/carmaspeed.png" alt="alexandra gioia"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Carmaspeed</h5>
+                                        </div>                                    
+                                        <p class="content">For the carmaspeed website, we have used PSD designs, including multiple features such as the Homepage custom collection section, an integrated after pay payment app, and custom designs created as per the client's requirements.</p>
+                                        {/* <a href="alexandra-gioia-case-study.php" class="button">View Details</a> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/proverbskin.png" alt="alexandra gioia"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Proverbskin</h5>
+                                        </div>                                    
+                                        <p class="content">For the proverbskin website, we have used PSD designs, including multiple features such as the Homepage custom collection section, an integrated after pay payment app, and custom designs created as per the client's requirements.</p>
+                                        {/* <a href="alexandra-gioia-case-study.php" class="button">View Details</a> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/pinksboutique.png" alt="alexandra gioia"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Pinksboutique</h5>
+                                        </div>                                    
+                                        <p class="content">For the pinksboutique website, we have used PSD designs, including multiple features such as the Homepage custom collection section, an integrated after pay payment app, and custom designs created as per the client's requirements.</p>
+                                        {/* <a href="alexandra-gioia-case-study.php" class="button">View Details</a> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/ceroplas.png" alt="alexandra gioia"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Ceroplas</h5>
+                                        </div>                                    
+                                        <p class="content">For the ceroplas website, we have used PSD designs, including multiple features such as the Homepage custom collection section, an integrated after pay payment app, and custom designs created as per the client's requirements.</p>
+                                        {/* <a href="alexandra-gioia-case-study.php" class="button">View Details</a> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/foziakhalid.png" alt="alexandra gioia"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Foziakhalid</h5>
+                                        </div>                                    
+                                        <p class="content">For the foziakhalid website, we have used PSD designs, including multiple features such as the Homepage custom collection section, an integrated after pay payment app, and custom designs created as per the client's requirements.</p>
+                                        {/* <a href="alexandra-gioia-case-study.php" class="button">View Details</a> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+
+                    
+                    <div class="case-study-tab-content hide" id="shopify_app">
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/case-study-aa.png" alt="Accessibility Assistant"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Accessibility Assistant</h5>
+                                        </div>
+                                        <p class="content">Get the ease of social responsibilities with Accessibility Assistant!</p>
+                                        <a href="case-study-accessibility-assistant.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/dropshipping-app.png" alt="dropshipping-app"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Dropshipping App</h5>
+                                        </div>                                    
+                                        <p class="content">Through dropshipping, a store owner sells the product and passes on the sales to a third-party supplier, who then ships the order to the customer.</p>
+                                        <a href="case-study-dropshipping-app.php" class="button">View Details</a>
                                     </div>
                                 </div>
                             </div>
                         </div> 
-                                ))}           
                     </div>
+                    <div class="case-study-tab-content hide" id="shopify_app">
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/case-study-aa.png" alt="Accessibility Assistant"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Accessibility Assistant</h5>
+                                        </div>
+                                        <p class="content">Get the ease of social responsibilities with Accessibility Assistant!</p>
+                                        <a href="case-study-accessibility-assistant.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/dropshipping-app.png" alt="dropshipping-app"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Dropshipping App</h5>
+                                        </div>                                    
+                                        <p class="content">Through dropshipping, a store owner sells the product and passes on the sales to a third-party supplier, who then ships the order to the customer.</p>
+                                        <a href="case-study-dropshipping-app.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="case-study-tab-content hide" id="shopify_app">
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/case-study-aa.png" alt="Accessibility Assistant"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Accessibility Assistant</h5>
+                                        </div>
+                                        <p class="content">Get the ease of social responsibilities with Accessibility Assistant!</p>
+                                        <a href="case-study-accessibility-assistant.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/dropshipping-app.png" alt="dropshipping-app"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Dropshipping App</h5>
+                                        </div>                                    
+                                        <p class="content">Through dropshipping, a store owner sells the product and passes on the sales to a third-party supplier, who then ships the order to the customer.</p>
+                                        <a href="case-study-dropshipping-app.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="case-study-tab-content hide" id="shopify_app">
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/case-study-aa.png" alt="Accessibility Assistant"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Accessibility Assistant</h5>
+                                        </div>
+                                        <p class="content">Get the ease of social responsibilities with Accessibility Assistant!</p>
+                                        <a href="case-study-accessibility-assistant.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/dropshipping-app.png" alt="dropshipping-app"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Dropshipping App</h5>
+                                        </div>                                    
+                                        <p class="content">Through dropshipping, a store owner sells the product and passes on the sales to a third-party supplier, who then ships the order to the customer.</p>
+                                        <a href="case-study-dropshipping-app.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="case-study-tab-content hide" id="shopify_app">
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/case-study-aa.png" alt="Accessibility Assistant"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Accessibility Assistant</h5>
+                                        </div>
+                                        <p class="content">Get the ease of social responsibilities with Accessibility Assistant!</p>
+                                        <a href="case-study-accessibility-assistant.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/dropshipping-app.png" alt="dropshipping-app"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Dropshipping App</h5>
+                                        </div>                                    
+                                        <p class="content">Through dropshipping, a store owner sells the product and passes on the sales to a third-party supplier, who then ships the order to the customer.</p>
+                                        <a href="case-study-dropshipping-app.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="case-study-tab-content hide" id="shopify_app">
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/case-study-aa.png" alt="Accessibility Assistant"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Accessibility Assistant</h5>
+                                        </div>
+                                        <p class="content">Get the ease of social responsibilities with Accessibility Assistant!</p>
+                                        <a href="case-study-accessibility-assistant.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/dropshipping-app.png" alt="dropshipping-app"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Dropshipping App</h5>
+                                        </div>                                    
+                                        <p class="content">Through dropshipping, a store owner sells the product and passes on the sales to a third-party supplier, who then ships the order to the customer.</p>
+                                        <a href="case-study-dropshipping-app.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="case-study-tab-content hide" id="shopify_app">
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/case-study-aa.png" alt="Accessibility Assistant"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Accessibility Assistant</h5>
+                                        </div>
+                                        <p class="content">Get the ease of social responsibilities with Accessibility Assistant!</p>
+                                        <a href="case-study-accessibility-assistant.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/dropshipping-app.png" alt="dropshipping-app"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Dropshipping App</h5>
+                                        </div>                                    
+                                        <p class="content">Through dropshipping, a store owner sells the product and passes on the sales to a third-party supplier, who then ships the order to the customer.</p>
+                                        <a href="case-study-dropshipping-app.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="case-study-tab-content hide" id="shopify_app">
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/case-study-aa.png" alt="Accessibility Assistant"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Accessibility Assistant</h5>
+                                        </div>
+                                        <p class="content">Get the ease of social responsibilities with Accessibility Assistant!</p>
+                                        <a href="case-study-accessibility-assistant.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/dropshipping-app.png" alt="dropshipping-app"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Dropshipping App</h5>
+                                        </div>                                    
+                                        <p class="content">Through dropshipping, a store owner sells the product and passes on the sales to a third-party supplier, who then ships the order to the customer.</p>
+                                        <a href="case-study-dropshipping-app.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="case-study-tab-content hide" id="shopify_app">
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/case-study-aa.png" alt="Accessibility Assistant"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Accessibility Assistant</h5>
+                                        </div>
+                                        <p class="content">Get the ease of social responsibilities with Accessibility Assistant!</p>
+                                        <a href="case-study-accessibility-assistant.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/dropshipping-app.png" alt="dropshipping-app"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Dropshipping App</h5>
+                                        </div>                                    
+                                        <p class="content">Through dropshipping, a store owner sells the product and passes on the sales to a third-party supplier, who then ships the order to the customer.</p>
+                                        <a href="case-study-dropshipping-app.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="case-study-tab-content hide" id="shopify_app">
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/case-study-aa.png" alt="Accessibility Assistant"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Accessibility Assistant</h5>
+                                        </div>
+                                        <p class="content">Get the ease of social responsibilities with Accessibility Assistant!</p>
+                                        <a href="case-study-accessibility-assistant.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-study-background">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-image">
+                                        <img loading="lazy" width="370px" height="247px" src="assets/images/dropshipping-app.png" alt="dropshipping-app"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="case-study-content-info">
+                                        <div class="case-study-name">
+                                            <h5 class="title">Dropshipping App</h5>
+                                        </div>                                    
+                                        <p class="content">Through dropshipping, a store owner sells the product and passes on the sales to a third-party supplier, who then ships the order to the customer.</p>
+                                        <a href="case-study-dropshipping-app.php" class="button">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
                     <div class="case-study-tab-content hide" id="shopify_app">
                         <div class="case-study-background">
                             <div class="row align-items-center">

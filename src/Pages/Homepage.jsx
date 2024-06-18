@@ -4,49 +4,16 @@ import BrandsLogoSlider from '../Components/BrandsLogoSlider';
 import LetDiscuss from '../Components/LetDiscuss';
 import Faq from '../Components/Faq';
 import CaseStudySlider from '../Components/CaseStudySlider';
+import BannerContactForm from '../Components/BannerContactForm';
+import CategorySlider from '../Components/CategorySlider';
 
 const Homepage = () => {
     
-    const industriesData = [
-        // Add your industry data here
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        { name: 'Fashion', imageSrc: 'assets/images/image%2013.png', alt: 'fashion' },
-        // Add other industries similarly
-      ];
-    
-      const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        arrows: false,
-        autoplay: true, // Enable autoplay
-        autoplaySpeed: 2000,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-        ],
-      };
-
-
+   
      
       const sliderSettings = {
         infinite: true,
+        dots: true,
         slidesToShow: 1,
         arrows: false,
         slidesToScroll: 1,
@@ -154,42 +121,7 @@ const Homepage = () => {
                         <a class="shopify-logo-white-banner" title="Shopify Expert" href="https://hireecommerceexperts.com/" target="_blank"><img src="/assets/images/Shopify-experts.png" alt="we certified icon" width="275px" height="60px" loading="lazy"/></a>
                     </div>
                 </div>
-                <div class="page-main-banner-colm col-lg-5 col-md-5">
-                    <div class="page-main-banner-contact-form">
-                        <h2 class="form-title h5">Get A Free Quote</h2>
-<form id="quote-form" method="post" name="quote-form">
-    <input type="hidden" name="c_url" value="NOXU Technologies.com/" />
-    <div class="form-group">
-        <input class="form-field" aria-label="Name" type="text" id="name" name="name" placeholder="Name"/>
-    </div>
-    <div class="form-group">
-        <input class="form-field email-tab" aria-label="Email" type="email" id="email" name="email" placeholder="Email Address"/>
-    </div>
-    <div class="form-group">
-        <div class="select-location">
-            <div class="dropdown example">
-                <div class="ui fluid search selection dropdown country_code">
-                    <span>+</span>
-                    <input type="number" placeholder="92" minlength="1" maxlength="4" id="country_code" name="country_code" class="form-field"/>
-                </div>
-            </div>
-            <input type="tel" class="form-field phone-number-field" aria-label="Phone Number" id="phone" name="phone" placeholder="Phone Number" autocomplete="off"/>
-        </div>
-    </div>
-    <div class="form-group">
-        <textarea class="form-field" aria-label="message" id="message" name="message" placeholder="Write Message" rows="5"></textarea>
-    </div>
-    <div class="successmsg hide">
-        Thank you.We will get back to you soon.
-    </div>
-    <div class="errormsg hide">
-        Somthing went wrong.Please try again.
-    </div>
-    <div class="form-group">
-        <button class="button submit-button" type="submit" aria-label="button Submit" id="get_free_quotes">Submit</button>
-    </div>
-</form>                    </div>
-                </div>
+               <BannerContactForm />
             </div>
         </div>
     </section>
@@ -859,35 +791,7 @@ const Homepage = () => {
         </div>
     </div>
 
-    <section class="industries-we-work section-spacing section-inner-spacing">
-        <div class="container">
-            <div class="section-head-part">
-                <h2 class="section-head-title">Diverse Industries We cater</h2>
-            </div>
-
-            <div className="industries-we-work-slider">
-      <Slider {...settings}>
-        {industriesData.map((industry, index) => (
-          <div key={index} className="industries-we-work-single">
-            <div className="industries-we-work-inner">
-              <div className="industries-image">
-                <img
-                  src={industry.imageSrc}
-                  width="299px"
-                  height="205px"
-                  alt={industry.alt}
-                  loading="lazy"
-                />
-              </div>
-              <div className="industries-name h6">{industry.name}</div>
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
-
-        </div>
-    </section>
+  <CategorySlider />
 
 
     <section id="company_info_number" class="company-info-number section-spacing">
