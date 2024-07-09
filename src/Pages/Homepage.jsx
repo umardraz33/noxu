@@ -6,6 +6,7 @@ import Faq from '../Components/Faq';
 import CaseStudySlider from '../Components/CaseStudySlider';
 import BannerContactForm from '../Components/BannerContactForm';
 import CategorySlider from '../Components/CategorySlider';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
     
@@ -292,12 +293,12 @@ const Homepage = () => {
                                 store, Our Shopify developers can help you meet your unique business requirements
                                 efficiently in no time.</p>
                         </div>
-                        <a href="shopify-store-setup.html" class="link-with-icon large-link">
+                        <Link to="/shopify-store-setup" class="link-with-icon large-link">
                             Explore Service
                             <svg class="link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.67661 0.175647C6.44221 -0.058549 6.06273 -0.058549 5.82893 0.175647C5.59452 0.409849 5.59452 0.788739 5.82893 1.02234L9.68969 4.8852C9.87853 5.07388 9.74485 5.40083 9.47807 5.40083H0.609686C0.278764 5.40083 0 5.66465 0 5.99528V5.99762C0 6.32826 0.278764 6.5988 0.609686 6.5988H9.47807C9.74485 6.5988 9.87853 6.91697 9.68969 7.10565L5.81034 10.9799C5.57594 11.2135 5.57594 11.5913 5.81034 11.8255C6.04414 12.0591 6.42362 12.0585 6.65803 11.8243L11.6488 6.83787C12.1171 6.37007 12.1171 5.61111 11.6488 5.14331C11.5403 5.03549 6.5681 0.0672371 6.67661 0.175647Z" fill="#330C79"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div class="services-list-wrap col-lg-4 col-md-6 col-sm-6 col-spacing-bottom">
@@ -312,12 +313,12 @@ const Homepage = () => {
                                 themes, and apps without affecting clients' running operations. Our Shopify plus
                                 developers guarantee the most secure and high-performing eCommerce development.</p>
                         </div>
-                        <a href="shopify-plus-store-development.html" class="link-with-icon large-link">
+                        <Link to="/shopify-plus-store-development" class="link-with-icon large-link">
                             Explore Service
                             <svg class="link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.67661 0.175647C6.44221 -0.058549 6.06273 -0.058549 5.82893 0.175647C5.59452 0.409849 5.59452 0.788739 5.82893 1.02234L9.68969 4.8852C9.87853 5.07388 9.74485 5.40083 9.47807 5.40083H0.609686C0.278764 5.40083 0 5.66465 0 5.99528V5.99762C0 6.32826 0.278764 6.5988 0.609686 6.5988H9.47807C9.74485 6.5988 9.87853 6.91697 9.68969 7.10565L5.81034 10.9799C5.57594 11.2135 5.57594 11.5913 5.81034 11.8255C6.04414 12.0591 6.42362 12.0585 6.65803 11.8243L11.6488 6.83787C12.1171 6.37007 12.1171 5.61111 11.6488 5.14331C11.5403 5.03549 6.5681 0.0672371 6.67661 0.175647Z" fill="#330C79"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div class="services-list-wrap col-lg-4 col-md-6 col-sm-6 col-spacing-bottom">
@@ -332,12 +333,12 @@ const Homepage = () => {
                                 tremendous Shopify apps with all unique features and functionalities beyond customers'
                                 expectations.</p>
                         </div>
-                        <a href="shopify-app-development.html" class="link-with-icon large-link">
+                        <Link to="/shopify-app-development" class="link-with-icon large-link">
                             Explore Service
                             <svg class="link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.67661 0.175647C6.44221 -0.058549 6.06273 -0.058549 5.82893 0.175647C5.59452 0.409849 5.59452 0.788739 5.82893 1.02234L9.68969 4.8852C9.87853 5.07388 9.74485 5.40083 9.47807 5.40083H0.609686C0.278764 5.40083 0 5.66465 0 5.99528V5.99762C0 6.32826 0.278764 6.5988 0.609686 6.5988H9.47807C9.74485 6.5988 9.87853 6.91697 9.68969 7.10565L5.81034 10.9799C5.57594 11.2135 5.57594 11.5913 5.81034 11.8255C6.04414 12.0591 6.42362 12.0585 6.65803 11.8243L11.6488 6.83787C12.1171 6.37007 12.1171 5.61111 11.6488 5.14331C11.5403 5.03549 6.5681 0.0672371 6.67661 0.175647Z" fill="#330C79"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div class="services-list-wrap col-lg-4 col-md-6 col-sm-6 col-spacing-bottom">
@@ -352,12 +353,12 @@ const Homepage = () => {
                                 delivering feature-rich, user-friendly, and powerful mobile versions of your online
                                 Shopify stores.</p>
                         </div>
-                        <a href="shopify-mobile-app-development.html" class="link-with-icon large-link">
+                        <Link to="/shopify-mobile-app-development" class="link-with-icon large-link">
                             Explore Service
                             <svg class="link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.67661 0.175647C6.44221 -0.058549 6.06273 -0.058549 5.82893 0.175647C5.59452 0.409849 5.59452 0.788739 5.82893 1.02234L9.68969 4.8852C9.87853 5.07388 9.74485 5.40083 9.47807 5.40083H0.609686C0.278764 5.40083 0 5.66465 0 5.99528V5.99762C0 6.32826 0.278764 6.5988 0.609686 6.5988H9.47807C9.74485 6.5988 9.87853 6.91697 9.68969 7.10565L5.81034 10.9799C5.57594 11.2135 5.57594 11.5913 5.81034 11.8255C6.04414 12.0591 6.42362 12.0585 6.65803 11.8243L11.6488 6.83787C12.1171 6.37007 12.1171 5.61111 11.6488 5.14331C11.5403 5.03549 6.5681 0.0672371 6.67661 0.175647Z" fill="#330C79"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div class="services-list-wrap col-lg-4 col-md-6 col-sm-6 col-spacing-bottom">
@@ -373,12 +374,12 @@ const Homepage = () => {
                                 to boost their profit by trunking multiple Shopify stores with their Shopify
                                 marketplace.</p>
                         </div>
-                        <a href="shopify-marketplace.html" class="link-with-icon large-link">
+                        <Link to="/shopify-marketplace" class="link-with-icon large-link">
                             Explore Service
                             <svg class="link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.67661 0.175647C6.44221 -0.058549 6.06273 -0.058549 5.82893 0.175647C5.59452 0.409849 5.59452 0.788739 5.82893 1.02234L9.68969 4.8852C9.87853 5.07388 9.74485 5.40083 9.47807 5.40083H0.609686C0.278764 5.40083 0 5.66465 0 5.99528V5.99762C0 6.32826 0.278764 6.5988 0.609686 6.5988H9.47807C9.74485 6.5988 9.87853 6.91697 9.68969 7.10565L5.81034 10.9799C5.57594 11.2135 5.57594 11.5913 5.81034 11.8255C6.04414 12.0591 6.42362 12.0585 6.65803 11.8243L11.6488 6.83787C12.1171 6.37007 12.1171 5.61111 11.6488 5.14331C11.5403 5.03549 6.5681 0.0672371 6.67661 0.175647Z" fill="#330C79"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div class="services-list-wrap col-lg-4 col-md-6 col-sm-6 col-spacing-bottom">
@@ -394,12 +395,12 @@ const Homepage = () => {
                                 official Shopify experts are excellent at migrating WooCommerce, Magento, Wix,
                                 BigCommerce, etc., to Shopify.</p>
                         </div>
-                        <a href="shopify-migration.html" class="link-with-icon large-link">
+                        <Link to="/shopify-migration" class="link-with-icon large-link">
                             Explore Service
                             <svg class="link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.67661 0.175647C6.44221 -0.058549 6.06273 -0.058549 5.82893 0.175647C5.59452 0.409849 5.59452 0.788739 5.82893 1.02234L9.68969 4.8852C9.87853 5.07388 9.74485 5.40083 9.47807 5.40083H0.609686C0.278764 5.40083 0 5.66465 0 5.99528V5.99762C0 6.32826 0.278764 6.5988 0.609686 6.5988H9.47807C9.74485 6.5988 9.87853 6.91697 9.68969 7.10565L5.81034 10.9799C5.57594 11.2135 5.57594 11.5913 5.81034 11.8255C6.04414 12.0591 6.42362 12.0585 6.65803 11.8243L11.6488 6.83787C12.1171 6.37007 12.1171 5.61111 11.6488 5.14331C11.5403 5.03549 6.5681 0.0672371 6.67661 0.175647Z" fill="#330C79"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div class="services-list-wrap col-lg-4 col-md-6 col-sm-6 col-spacing-bottom">
@@ -414,12 +415,12 @@ const Homepage = () => {
                                 using the Hydrogen framework to enable you to deliver exceptional user experience and
                                 boost customer conversion ratio.</p>
                         </div>
-                      <a href="#" class="link-with-icon large-link">
+                      <Link to="/hire-headless-commerce-developer" class="link-with-icon large-link">
                        Explore Service
                        <svg class="link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.67661 0.175647C6.44221 -0.058549 6.06273 -0.058549 5.82893 0.175647C5.59452 0.409849 5.59452 0.788739 5.82893 1.02234L9.68969 4.8852C9.87853 5.07388 9.74485 5.40083 9.47807 5.40083H0.609686C0.278764 5.40083 0 5.66465 0 5.99528V5.99762C0 6.32826 0.278764 6.5988 0.609686 6.5988H9.47807C9.74485 6.5988 9.87853 6.91697 9.68969 7.10565L5.81034 10.9799C5.57594 11.2135 5.57594 11.5913 5.81034 11.8255C6.04414 12.0591 6.42362 12.0585 6.65803 11.8243L11.6488 6.83787C12.1171 6.37007 12.1171 5.61111 11.6488 5.14331C11.5403 5.03549 6.5681 0.0672371 6.67661 0.175647Z" fill="#330C79"/>
                        </svg>                                                   
-                    </a> 
+                    </Link> 
                     </div>
                 </div>
                 <div class="services-list-wrap col-lg-4 col-md-6 col-sm-6 col-spacing-bottom">
@@ -435,12 +436,12 @@ const Homepage = () => {
                                 to boost their profit by trunking multiple Shopify stores with their Shopify
                                 marketplace.</p>
                         </div>
-                        <a href="shopify-seo.html" class="link-with-icon large-link">
+                        <Link to="/shopify-seo" class="link-with-icon large-link">
                             Explore Service
                             <svg class="link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.67661 0.175647C6.44221 -0.058549 6.06273 -0.058549 5.82893 0.175647C5.59452 0.409849 5.59452 0.788739 5.82893 1.02234L9.68969 4.8852C9.87853 5.07388 9.74485 5.40083 9.47807 5.40083H0.609686C0.278764 5.40083 0 5.66465 0 5.99528V5.99762C0 6.32826 0.278764 6.5988 0.609686 6.5988H9.47807C9.74485 6.5988 9.87853 6.91697 9.68969 7.10565L5.81034 10.9799C5.57594 11.2135 5.57594 11.5913 5.81034 11.8255C6.04414 12.0591 6.42362 12.0585 6.65803 11.8243L11.6488 6.83787C12.1171 6.37007 12.1171 5.61111 11.6488 5.14331C11.5403 5.03549 6.5681 0.0672371 6.67661 0.175647Z" fill="#330C79"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div class="services-list-wrap col-lg-4 col-md-6 col-sm-6 col-spacing-bottom">
@@ -456,12 +457,12 @@ const Homepage = () => {
                                 more. Our certified Shopify experts guarantee operational cost reduction and accelerated
                                 ROI.</p>
                         </div>
-                        <a href="shopify-integration.html" class="link-with-icon large-link">
+                        <Link to="/shopify-integration" class="link-with-icon large-link">
                             Explore Service
                             <svg class="link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.67661 0.175647C6.44221 -0.058549 6.06273 -0.058549 5.82893 0.175647C5.59452 0.409849 5.59452 0.788739 5.82893 1.02234L9.68969 4.8852C9.87853 5.07388 9.74485 5.40083 9.47807 5.40083H0.609686C0.278764 5.40083 0 5.66465 0 5.99528V5.99762C0 6.32826 0.278764 6.5988 0.609686 6.5988H9.47807C9.74485 6.5988 9.87853 6.91697 9.68969 7.10565L5.81034 10.9799C5.57594 11.2135 5.57594 11.5913 5.81034 11.8255C6.04414 12.0591 6.42362 12.0585 6.65803 11.8243L11.6488 6.83787C12.1171 6.37007 12.1171 5.61111 11.6488 5.14331C11.5403 5.03549 6.5681 0.0672371 6.67661 0.175647Z" fill="#330C79"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
