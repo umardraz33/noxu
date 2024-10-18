@@ -1,8 +1,7 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![noxu](https://github.com/user-attachments/assets/702faff2-b38b-49d8-9e8d-48e2d104022e)
 
-Currently, two official plugins are available:
+**NOXU Technologies**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+NOXU Technologies is a leading Shopify development company, offering exceptional eCommerce development services tailored for a wide range of industries. Our extensive expertise in Shopify store development ensures best-in-class features and functionalities. Here are some compelling reasons to choose NOXU Technologies for your eCommerce website development or Shopify store development services:
+
